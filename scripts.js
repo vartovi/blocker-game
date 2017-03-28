@@ -41,33 +41,3 @@ function gameOver() {
     ctx.fillStyle = "Red";
     ctx.fillText("Game over",70,70);
 }
-
-function moveUp() {
-    player.y -= 5;
-}
-
-function moveDown() {
-    player.y += 2;
-}
-
-var obstacle =  function (x, y) {
-    this.x = x;
-    this.y = y;
-    this.width = 5;
-    this.height = 110;
-};
-
-$(document).keydown(function(e) {
-    switch(e.which) {
-        case 38: // up
-            moveUp();
-            break;
-
-        case 40: // down
-            moveDown();
-            break;
-
-        default: return;
-    }
-    e.preventDefault();
-});

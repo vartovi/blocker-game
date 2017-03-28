@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blocker Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body onload="loadGame()">
+<div id="container">
+    <div><h2>Blocker game</h2></div>
+    <div><p>Use arrow keys to move</p></div>
+    <div><input type="button" value="Start" onclick="startGame()"></div>
+    <div><canvas id="gameDisplay"></canvas></div>
+    <div><input id="up" type="button" value="up" onclick="moveUp()"><input id="down" type="button" value="down" onClick="moveDown()"></div>
+    <div><h3 id="points">Points: 0</h3></div>
+</div>
+<script src="player.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

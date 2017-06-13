@@ -8,6 +8,7 @@ function loadGame() {
 
 function startGame() {
     var frameCount = 0;
+
     var interval = setInterval(function(){
         ctx.fillStyle = "black";
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -21,6 +22,7 @@ function startGame() {
             }
             ctx.fillRect(walls[i].x, walls[i].y, 10, 100);
             ctx.fillRect(walls[i].x, (walls[i].y - canvas.height + 10), 10, 100);
+
             if((walls[i].x <= 20 && walls[i].x >= 1) && (walls[i].y <= (player.y+20) || (walls[i].y-40) >= player.y)){
                 clearInterval(interval);
                 gameOver();
